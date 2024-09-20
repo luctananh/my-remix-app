@@ -1,136 +1,366 @@
-export const meta = () => {
-  return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
-  ];
-};
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import '../css/layout.css';
+import '../css/test.css';
 
 export default function Index() {
   return (
-    <div className="flex h-screen items-center justify-center">
-      <div className="flex flex-col items-center gap-16">
-        <header className="flex flex-col items-center gap-9">
-          <h1 className="leading text-2xl font-bold text-gray-800 dark:text-gray-100">
-            Welcome to <span className="sr-only">Remix</span>
-          </h1>
-          <div className="h-[144px] w-[434px]">
-            <img
-              src="/logo-light.png"
-              alt="Remix"
-              className="block w-full dark:hidden"
-            />
-            <img
-              src="/logo-dark.png"
-              alt="Remix"
-              className="hidden w-full dark:block"
-            />
-          </div>
-        </header>
-        <nav className="flex flex-col items-center justify-center gap-4 rounded-3xl border border-gray-200 p-6 dark:border-gray-700">
-          <p className="leading-6 text-gray-700 dark:text-gray-200">
-            What&apos;s next?
-          </p>
-          <ul>
-            {resources.map(({ href, text, icon }) => (
-              <li key={href}>
-                <a
-                  className="group flex items-center gap-3 self-stretch p-3 leading-normal text-blue-700 hover:underline dark:text-blue-500"
-                  href={href}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {icon}
-                  {text}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+    <>
+      {/* TOOBAR */}
+      <div className='toolbar'>
+        <p className='toolbar-text' id='text1'>Discover the Power of Ryviu for your Shopify Store! </p>
+        <div className='toolbar-box'>
+          <img src="Envelope.svg" alt="icon-mail" />
+          <p className='toolbar-text' id='text1'>Info@ryviu.com</p>
+        </div>
       </div>
+      {/* NAVBAR */}
+      <div className='nav'>
+        <div className='nav-main'>
+        <p className='nav-logo' id="text3">LUMINA</p>
+        <ul className='content-ul'>
+          <li >
+            <a className='nav-text' id="text1" href="">Home</a>
+          </li>
+          <li >
+            <a className='nav-text' id="text1" href="">Shop</a>
+          </li>
+          <li >
+            <a className='nav-text' id="text1" href="">Masonry featured reviews</a>
+          </li>
+          <li >
+            <a className='nav-text' id="text1" href="">Carousel featured reviews</a>
+          </li>
+        </ul>
+        <div className='nav-icon'>
+          <button>
+            <img src="Search.svg" alt="icon-search" />
+          </button>
+          <button className='nav-cart'>
+            <p className ="nav-Shopping-text">0</p>
+            <img src="Shopping Cart.svg" alt="icon-shopping" />
+          </button>
+        </div>
+        </div>
+      </div>
+      {/* SLIDER */}
+      <div className='slider'>
+        <div className='slider-main'>
+          <p className='slider-text' id='text4'>Illuminate your world with Lumina</p>
+          <a href="" className='slider-click' id="text1">Shop now</a>
+        </div>
+        <img src="Rectangle1.png" alt="Rectangle1"/>
+      </div>
+      {/* CONTENT */}
+      <div className='content'>
+        <p className='content-text-header' id='text1'>Shop by categories</p>
+        <ul className='content-ul'>
+          <li>
+            <div className='content-box' id='text1'>
+              <img src="Rectangle 3.png" alt="sample" />
+              <p>Ceiling Lights</p>
+            </div>
+          </li>
+          <li>
+            <div className='content-box' id='text1'>
+              <img src="Rectangle 5.png" alt="sample" />
+              <p>Ceiling Lights</p>
+            </div>
+          </li>
+          <li>
+            <div className='content-box' id='text1'>
+              <img src="Rectangle 44.png" alt="sample" />
+              <p>Table Lamps</p>
+            </div>
+          </li>
+          <li>
+            <div className='content-box' id='text1'>
+              <img src="Rectangle 45.png" alt="sample" />
+              <p>Floor Lamps</p>
+            </div>
+          </li>
+          <li>
+            <div className='content-box' id='text1'>
+              <img src="Rectangle 8.png" alt="sample" />
+              <p>Outdoor Lights</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      {/* CONTENT-LISH */}
+      <div className='content-lish'>
+        <p className='content-lish-text' id='text1'>New Arrivals</p>
+        <p className='content-lish-text2' id='text1'>Brighten your home with the latest styles!</p>
+        <div className='content-lish-main'>
+          <ul className='content-lish-ul'>
+            <li> 
+              <img src="Rectangle 46.png" alt="img" className='png'/>
+              <div>
+                <p className='content-lish-from' id='text1' >Wabi Sabi modern pendant light</p>
+                <ul className='content-star-ul'>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar2.svg" alt="icon-star" /></li>
+                  <p id='text1'>(8)</p>
+                </ul>
+                <p className='content-lish-from' id='text1'>From $97.79</p>
+              </div>
+            </li>
+            <li>
+              <img src="37962f67-511c-44d5-9102-4d808fb3091f 1.png" alt="img"  className='png'/>
+              <div >
+                <p className='content-lish-from' id='text1'>Modern bedroom table lamp</p>
+                <ul className='content-star-ul'>
+                  <li><img src="IconStar3.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar3.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar3.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar3.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar3.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar3.svg" alt="icon-star" /></li>
+                </ul>
+                <p className='content-lish-from' id='text1'>From $57.79</p>
+              </div>
+            </li>
+            <li>
+              <img src="12-Light 1.png" alt="img"  className='png' />
+              <div>
+                <p className='content-lish-from' id='text1'>Brass modern 12-Light opal chandelier</p>
+                <ul className='content-star-ul'>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar2.svg" alt="icon-star" /></li>
+                  <p className='content-lish-from' id='text1'>(6)</p>
+                </ul>
+                <p className='content-lish-from' id='text1'>From $57.79</p>
+              </div>
+            </li>
+            <li>
+              <img src="f0163b9a-f02b-4db6-a7d9-c8b8f9dd85db 1.png" alt="img"  className='png' id='png-pd'/>
+              <div>
+                <p className='content-lish-from' id='text1'>Adjustable nordic LED floor lamp</p>
+                <ul className='content-star-ul'>
+                  <li><img src="IconStar3.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar3.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar3.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar3.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar3.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar3.svg" alt="icon-star" /></li>
+                </ul>
+                <p className='content-lish-from' id='text1'>From $57.79</p>
+              </div>
+            </li>
+          </ul>
+          <ul className='content-lish-ul'>
+            <li>
+              <img src="Outdoor-waterproof-wall-lamps 1.png" alt="img"  className='png'/>
+              <div>
+                <p className='content-lish-from' id='text1'>Outdoor waterproof wall lamps</p>
+                <ul className='content-star-ul'>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar2.svg" alt="icon-star" /></li>
+                  <p className='content-lish-from' id='text1'>(24)</p>
+                </ul>
+                <p className='content-lish-from' id='text1'>From $99.79</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <img src="Nordic-mordel 1.png" alt="img"  className='png'/>
+                <p className='content-lish-from' id='text1'>12-Light black globe chandelier</p>
+                <ul className='content-star-ul'>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <p className='content-lish-from' id='text1'>(2)</p>
+                </ul>
+                <p className='content-lish-from' id='text1'>From $149.00</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <img src="Mobo-Ceramic-Wall-Lamps 1.png" alt="img"  className='png'/>
+                <p className='content-lish-from' id='text1'>Mobo ceramic wall lamps</p>
+                <ul className='content-star-ul'>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <p className='content-lish-from' id='text1'>(1)</p>
+                </ul>
+                <p className='content-lish-from' id='text1'>From $97.79</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <img src="Martha-Table-Lamp 1.png" alt="img"  className='png'/>
+                <p className='content-lish-from' id='text1'>Martha table lamp</p>
+                <ul className='content-star-ul'>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <li><img src="IconStar.svg" alt="icon-star" /></li>
+                  <p className='content-lish-from' id='text1'>(4)</p>
+                </ul>
+                <p className='content-lish-from' id='text1'>From $97.79</p>
+              </div> 
+            </li>
+          </ul>
+        </div>
+      </div>
+      {/* BANNER */}
+      <div className='banner'>
+        <img src="Frame 253.png" alt="img"/>
+        <div className='banner-main'>
+          <p className='banner-main-text' id='text4'>Brighten Up Your Home!</p>
+          <p className='banner-main-text2' id='text1'>                
+            Exclusive <a className='summerSale' href=""> Summer Sale</a> on lighting products
+          </p>
+          <a className='banner-main-text3' id='text1' href="">Discover more</a>
+        </div>  
+      </div>
+      {/* FEATURE */}
+      <div className='feature'>
+        <ul className='feature-ul'>
+          <li className='feature-li'>
+            <img src="In Transit.svg" alt="icon-InTransit" />
+            <p className='frame55' id='text1'>Free shipping</p>
+            <p id='text1'>Pay with multiple credit card</p>
+          </li>
+          <li className='feature-li' >
+            <img src="Card Payment.svg" alt="img-CardPayment" />
+            <p className='frame55' id='text1'>Flexible payment</p>
+            <p id='text1'>Pay with multiple credit card</p>
+          </li>
+          <li className='feature-li'>
+            <img src="Transaction.svg" alt="img-Transaction" />
+            <p className='frame55' id='text1'> 14 Day returns</p>
+            <p id='text1'>Within 30 days for exchange</p>  
+          </li>
+        </ul>
     </div>
+    {/* FOOTER */}
+    <div className='footer'>
+      {/* <div className='footer-main'> */}
+        <div className='footer-header'>
+          {/* <div className='footer-header-text'> */}
+            <p className='footer-header-text1' id='text1'>Sign up</p>
+            <p className='footer-header-text2' id='text1'>Be the first to know about new collections and exclusive offers.</p>
+          {/* </div> */}
+          <div className='footer-header-sreach'>
+            <input type="sreach" placeholder="Enter your email" className='footer-sreach'/>
+            <a href="" className='footer-header-join' id='text1'>Join</a>
+          </div>
+        </div>
+        <div className='footer-body'>
+          <ul className='footer-body-ul'>
+            <li className='footer-body-li'>
+              <ul className='footer-ul'>
+                <li className='footer-li'>
+                  <p className='footer-li-text' id='text2'>Lumina</p>
+                  <p className='footer-li-text1' id='text1'>Adress: SN 185 Diem Dien, Thai Thuy, Thai Binh, VN </p>
+                  <p className='footer-li-text1' id='text1'>Email us: info@ryviu.com</p> 
+                  <p className='footer-li-text1' id='text1'>Call us: (+84)964300246</p>
+                </li>
+                <li className='footer-icon'>
+                  <img src="Instagram.svg" alt="icon-Instagram" />
+                  <img src="Twitter Circled.svg" alt="icon-TwitterCircled" />
+                  <img src="Facebook.svg" alt="icon-Facebook" />
+                  <img src="Pinterest.svg" alt="icon-Pinterest" />
+                </li>
+              </ul>
+            </li>
+            <li className='footer-body-li'>
+              <ul className='footer-body-lish'>
+                <li className='footer-li-about'>
+                  <a href=""  id='text1'>About us</a>
+                </li>
+                <li>
+                  <a href="" className='footer-li-text1' id='text1'>Blog</a>
+                </li>
+                <li>
+                  <a href="" className='footer-li-text1' id='text1'>Pricing</a>
+                </li>
+                <li>
+                  <a href="" className='footer-li-text1' id='text1'>Document</a>
+                </li>
+                <li>
+                  <a href="" className='footer-li-text1' id='text1'>Contact us</a>
+                </li>
+              </ul>
+            </li>
+            <li className='footer-body-li'>
+              <ul className='footer-body-lish'>
+                <li className='footer-li-about'>
+                  <a href="" id='text1'>Help</a>
+                </li>
+                <li>
+                  <a href="" className='footer-li-text1' id='text1'>Privacy policy</a>
+                </li>
+                <li>
+                  <a href="" className='footer-li-text1' id='text1'>Shipping</a>
+                </li>
+                <li>
+                  <a href="" className='footer-li-text1' id='text1'>Terms & Conditions</a>
+                </li>
+                <li>
+                  <a href="" className='footer-li-text1' id='text1'>FAQ&#39;s</a>
+                </li>
+              </ul>
+            </li>
+            <li className='footer-body-li'>
+              <p className='text-frane94'>Reviews Badge</p>
+              <div className='group28'>
+                <div className='group'>
+                  <img src="Vector3.svg" alt="" className='Vector4'/>
+                  <img src="Vector4.svg" alt="" className='Vector3'/>
+                  <p className ='text-47group'>4.7</p>
+                  <p className='text-review'>1383 reviews</p>
+                </div>
+                <p className='text-group28'>Verified Reviews</p>
+                <img src="Vector.svg" alt="" className='Vector' />
+                <img src="Vector1.svg" alt="" className='Vector1'/>
+                <img src="Vector2.svg" alt="" className='Vector2'/>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div className='footer-footer'>
+          <p className='footer-li-text1' id='text1'>Copyright ©2022 Ryviu. All rights reserved.</p>
+          <ul className='footer-footer-icon'>
+            <li>
+              <img src="MasterCard.svg" alt="icon-MasterCard" />
+            </li>
+            <li>
+              <img src="Visa.svg" alt="icon-Visa" />
+            </li>
+            <li>
+                <img src="Amazon.svg" alt="icon-Amazon" className='footer-amazon'/>
+            </li>
+            <li>
+                <img src="PayPal.svg" alt="icon-PayPal" className='footer-paypal'/>
+            </li>
+          </ul>
+        </div>
+      {/* </div> */}
+    </div>
+    </>
   );
 }
 
-const resources = [
-  {
-    href: "https://remix.run/start/quickstart",
-    text: "Quick Start (5 min)",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="20"
-        viewBox="0 0 20 20"
-        fill="none"
-        className="stroke-gray-600 group-hover:stroke-current dark:stroke-gray-300"
-      >
-        <path
-          d="M8.51851 12.0741L7.92592 18L15.6296 9.7037L11.4815 7.33333L12.0741 2L4.37036 10.2963L8.51851 12.0741Z"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    ),
-  },
-  {
-    href: "https://remix.run/start/tutorial",
-    text: "Tutorial (30 min)",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="20"
-        viewBox="0 0 20 20"
-        fill="none"
-        className="stroke-gray-600 group-hover:stroke-current dark:stroke-gray-300"
-      >
-        <path
-          d="M4.561 12.749L3.15503 14.1549M3.00811 8.99944H1.01978M3.15503 3.84489L4.561 5.2508M8.3107 1.70923L8.3107 3.69749M13.4655 3.84489L12.0595 5.2508M18.1868 17.0974L16.635 18.6491C16.4636 18.8205 16.1858 18.8205 16.0144 18.6491L13.568 16.2028C13.383 16.0178 13.0784 16.0347 12.915 16.239L11.2697 18.2956C11.047 18.5739 10.6029 18.4847 10.505 18.142L7.85215 8.85711C7.75756 8.52603 8.06365 8.21994 8.39472 8.31453L17.6796 10.9673C18.0223 11.0653 18.1115 11.5094 17.8332 11.7321L15.7766 13.3773C15.5723 13.5408 15.5554 13.8454 15.7404 14.0304L18.1868 16.4767C18.3582 16.6481 18.3582 16.926 18.1868 17.0974Z"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    ),
-  },
-  {
-    href: "https://remix.run/docs",
-    text: "Remix Docs",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="20"
-        viewBox="0 0 20 20"
-        fill="none"
-        className="stroke-gray-600 group-hover:stroke-current dark:stroke-gray-300"
-      >
-        <path
-          d="M9.99981 10.0751V9.99992M17.4688 17.4688C15.889 19.0485 11.2645 16.9853 7.13958 12.8604C3.01467 8.73546 0.951405 4.11091 2.53116 2.53116C4.11091 0.951405 8.73546 3.01467 12.8604 7.13958C16.9853 11.2645 19.0485 15.889 17.4688 17.4688ZM2.53132 17.4688C0.951566 15.8891 3.01483 11.2645 7.13974 7.13963C11.2647 3.01471 15.8892 0.951453 17.469 2.53121C19.0487 4.11096 16.9854 8.73551 12.8605 12.8604C8.73562 16.9853 4.11107 19.0486 2.53132 17.4688Z"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-      </svg>
-    ),
-  },
-  {
-    href: "https://rmx.as/discord",
-    text: "Join Discord",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="20"
-        viewBox="0 0 24 20"
-        fill="none"
-        className="stroke-gray-600 group-hover:stroke-current dark:stroke-gray-300"
-      >
-        <path
-          d="M15.0686 1.25995L14.5477 1.17423L14.2913 1.63578C14.1754 1.84439 14.0545 2.08275 13.9422 2.31963C12.6461 2.16488 11.3406 2.16505 10.0445 2.32014C9.92822 2.08178 9.80478 1.84975 9.67412 1.62413L9.41449 1.17584L8.90333 1.25995C7.33547 1.51794 5.80717 1.99419 4.37748 2.66939L4.19 2.75793L4.07461 2.93019C1.23864 7.16437 0.46302 11.3053 0.838165 15.3924L0.868838 15.7266L1.13844 15.9264C2.81818 17.1714 4.68053 18.1233 6.68582 18.719L7.18892 18.8684L7.50166 18.4469C7.96179 17.8268 8.36504 17.1824 8.709 16.4944L8.71099 16.4904C10.8645 17.0471 13.128 17.0485 15.2821 16.4947C15.6261 17.1826 16.0293 17.8269 16.4892 18.4469L16.805 18.8725L17.3116 18.717C19.3056 18.105 21.1876 17.1751 22.8559 15.9238L23.1224 15.724L23.1528 15.3923C23.5873 10.6524 22.3579 6.53306 19.8947 2.90714L19.7759 2.73227L19.5833 2.64518C18.1437 1.99439 16.6386 1.51826 15.0686 1.25995ZM16.6074 10.7755L16.6074 10.7756C16.5934 11.6409 16.0212 12.1444 15.4783 12.1444C14.9297 12.1444 14.3493 11.6173 14.3493 10.7877C14.3493 9.94885 14.9378 9.41192 15.4783 9.41192C16.0471 9.41192 16.6209 9.93851 16.6074 10.7755ZM8.49373 12.1444C7.94513 12.1444 7.36471 11.6173 7.36471 10.7877C7.36471 9.94885 7.95323 9.41192 8.49373 9.41192C9.06038 9.41192 9.63892 9.93712 9.6417 10.7815C9.62517 11.6239 9.05462 12.1444 8.49373 12.1444Z"
-          strokeWidth="1.5"
-        />
-      </svg>
-    ),
-  },
-];
